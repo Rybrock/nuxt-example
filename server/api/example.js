@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
     try {
-        const response = await $fetch('https://api.rawg.io/api/games?key=b5d523a75dce4411ae5fd7d8dd15941e');
+        const response = await $fetch(`https://api.rawg.io/api/games?key=${apiKey}`);
         
         if (!response) {
             throw new Error("No data received from API");
